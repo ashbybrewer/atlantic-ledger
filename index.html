@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#100f0c">
+  <meta name="description" content="A source-aware visualization of forced journeys across the Atlantic world.">
+  <title>The Atlantic Ledger</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="#opening">
+      <span>THE</span>
+      <strong>ATLANTIC LEDGER</strong>
+      <small>1501–1866</small>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="#narrative">Narrative</a>
+      <a href="#explore">Explore</a>
+      <a href="#method">Method</a>
+    </nav>
+    <button class="source-button" id="sources-button">Sources <b>04</b></button>
+  </header>
+
+  <main>
+    <section class="opening" id="opening">
+      <div class="opening-copy">
+        <p class="kicker">THE ARCHIVE MADE VISIBLE</p>
+        <h1>Every route is a record.<br>Every number was a person.</h1>
+        <p class="deck">A source-aware reconstruction of forced journeys across the Atlantic world, built to show both what survives and what the archive erased.</p>
+        <a class="opening-cta" href="#narrative">Enter the ledger <span>↓</span></a>
+      </div>
+      <div class="opening-stats" aria-label="Key estimates">
+        <article><strong id="stat-voyages">30,745</strong><span>voyage records drawable from source to destination</span></article>
+        <article><strong>12.52M</strong><span>estimated people embarked from Africa</span></article>
+        <article><strong>10.70M</strong><span>estimated people landed in the Americas</span></article>
+        <article class="loss"><strong>1.82M</strong><span>difference between those estimates</span></article>
+      </div>
+      <div class="opening-dots" id="opening-dots" aria-hidden="true"></div>
+      <p class="opening-note">Each mark above stands for 4,000 people. The names of most do not survive in the joined archive.</p>
+    </section>
+
+    <section class="narrative" id="narrative">
+      <div class="map-stage">
+        <canvas id="map-canvas" aria-label="Animated map of documented trans-Atlantic slave voyages"></canvas>
+        <div class="map-grain"></div>
+        <div class="map-header">
+          <div>
+            <span id="map-mode">DOCUMENTED VOYAGES</span>
+            <strong id="map-year">1781</strong>
+          </div>
+          <div class="map-totals">
+            <span><i class="embarked"></i><b id="map-embarked">0</b> embarked</span>
+            <span><i class="landed"></i><b id="map-landed">0</b> landed</span>
+          </div>
+        </div>
+        <div class="map-legend">
+          <span><i class="documented"></i> documented route</span>
+          <span><i class="probable"></i> probable journey</span>
+          <span><i class="inferred"></i> imputed field</span>
+          <span><i class="unknown"></i> unknown</span>
+        </div>
+        <div class="nationality-legend" id="nationality-legend"></div>
+        <div class="hub-tooltip" id="hub-tooltip" hidden></div>
+        <div class="ship-card" id="ship-card" hidden></div>
+        <div class="person-card" id="person-card" hidden></div>
+        <div class="journey-card" id="journey-card" hidden></div>
+      </div>
+
+      <div class="story-rail">
+        <article class="story-step active" data-scene="scale">
+          <span class="chapter">01 / THE SCALE</span>
+          <h2>The archive is not the trade.</h2>
+          <p>SlaveVoyages reconstructs tens of thousands of crossings from shipping records, port books, court cases, newspapers, and scholarship. Even this immense archive is incomplete.</p>
+          <div class="evidence-callout"><b>Visual rule</b><span>On the aggregate map, one moving dot represents 25 people recorded on a voyage. It does not pretend to be a named person.</span></div>
+        </article>
+
+        <article class="story-step" data-scene="capture">
+          <span class="chapter">02 / BEFORE THE COAST</span>
+          <h2>No single cause explains enslavement.</h2>
+          <p>People entered the trade through warfare and raiding, judicial punishment, kidnapping, debt and pawning, tribute, and political upheaval. African brokers, rulers, merchants, and captors operated inside systems transformed and enlarged by Atlantic demand.</p>
+          <div class="driver-grid">
+            <span>warfare</span><span>raiding</span><span>judicial sale</span><span>kidnapping</span><span>debt</span><span>political upheaval</span>
+          </div>
+          <p class="precision-note">These are documented system-level drivers. They are not assigned to a person unless a source says so.</p>
+        </article>
+
+        <article class="story-step" data-scene="zong">
+          <span class="chapter">03 / A SHIP BECOMES LEGIBLE</span>
+          <h2>The Zong, 1781.</h2>
+          <p>A surviving voyage record can name the ship, its route, dates, people involved in the venture, and counts. It still cannot restore the identities of the people held aboard.</p>
+          <button class="text-button" data-feature="zong">Open source-linked dossier →</button>
+        </article>
+
+        <article class="story-step" data-scene="bora">
+          <span class="chapter">04 / WHEN A NAME SURVIVES</span>
+          <h2>Bora, recorded in 1819.</h2>
+          <p>The record preserves a name, age, sex, height, ship, embarkation port, captain, court outcome, and later fate. It does not preserve Bora’s ancestral home or cause of enslavement.</p>
+          <button class="text-button" data-feature="bora">Inspect the evidence chain →</button>
+        </article>
+
+        <article class="story-step" data-scene="clotilda">
+          <span class="chapter">05 / THE ILLEGAL ERA</span>
+          <h2>The Clotilda, 1860.</h2>
+          <p>More than half a century after the United States prohibited trans-Atlantic importation, the schooner sailed from Mobile to Ouidah and returned with 110 people recorded as embarked. Kossola lets us draw a rare named-person route beyond the ship.</p>
+          <button class="text-button" data-feature="clotilda">Open source-linked dossier →</button>
+        </article>
+
+        <article class="story-step" data-scene="after">
+          <span class="chapter">06 / AFTER LANDING</span>
+          <h2>The voyage record ends. A life does not.</h2>
+          <p>Auctions, sales, forced relocations, plantations, births, marriages, resistance, manumissions, and deaths must be joined from other archives. This is where Enslaved.org and the Slave Societies Digital Archive enter the build.</p>
+          <div class="join-chain">
+            <span>ship</span><i></i><span>auction</span><i></i><span>residence</span><i></i><span>family</span><i></i><span>fate</span>
+          </div>
+          <p class="precision-note">A connection appears only when shared names, dates, places, relationships, or scholarly linkage support it.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="explore" id="explore">
+      <div class="section-intro">
+        <p class="kicker">FREE EXPLORE / DOCUMENTED ROUTES</p>
+        <h2>Scrub 365 years of recorded crossings.</h2>
+        <p>The map renders exact voyage records where source and destination geometry survive. Counts marked “imputed” were reconstructed by SlaveVoyages scholars from incomplete evidence.</p>
+      </div>
+      <div class="explore-controls">
+        <label>
+          <span>YEAR</span>
+          <strong id="explore-year">1781</strong>
+          <input id="year-slider" type="range" min="1501" max="1866" value="1781">
+        </label>
+        <label>
+          <span>SHIP SEARCH</span>
+          <input id="ship-search" type="search" placeholder="Clotilda, Zong, Republic…">
+        </label>
+        <button id="play-button"><i></i><span>Play timeline</span></button>
+        <button id="person-scale-button"><i></i><span>Person-scale selected ship</span></button>
+      </div>
+      <div class="voyage-list-header"><span>YEAR / SHIP</span><span>ROUTE</span><span>PEOPLE</span><span>ARCHIVE ID</span></div>
+      <div class="voyage-list" id="voyage-list"></div>
+      <div class="journey-models">
+        <div>
+          <p class="kicker">PROBABLE JOURNEYS / CLEARLY LABELED</p>
+          <h3>Show the whole route when the archive allows it, and a probability corridor when it does not.</h3>
+        </div>
+        <div class="journey-model-list" id="journey-model-list"></div>
+      </div>
+    </section>
+
+    <section class="method" id="method">
+      <div class="section-intro">
+        <p class="kicker">METHOD / EVIDENCE BEFORE EFFECT</p>
+        <h2>Precision must include the precision of uncertainty.</h2>
+      </div>
+      <div class="method-grid">
+        <article>
+          <span class="certainty documented">DOCUMENTED</span>
+          <h3>A record directly states it.</h3>
+          <p>Ship names, dates, ports, recorded names, sale events, relationships, and archival citations.</p>
+        </article>
+        <article>
+          <span class="certainty inferred">INFERRED</span>
+          <h3>Evidence supports a bounded reconstruction.</h3>
+          <p>Imputed voyage counts, likely language groups, regional origins, and scholarly record linkages.</p>
+        </article>
+        <article>
+          <span class="certainty unknown">UNKNOWN</span>
+          <h3>The archive does not permit the claim.</h3>
+          <p>Ancestral village, cause of capture, auction, plantation, or fate when no joined source survives.</p>
+        </article>
+        <article>
+          <span class="certainty genetics">BIOARCHAEOLOGY</span>
+          <h3>Corroboration, not ethnic labeling.</h3>
+          <p>Ancient DNA and isotope evidence can narrow possible origins in particular studies. It cannot responsibly assign every person to a modern ethnic group.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <aside class="sources-drawer" id="sources-drawer" aria-hidden="true">
+    <button id="sources-close" aria-label="Close sources">×</button>
+    <p class="kicker">SOURCE REGISTER</p>
+    <h2>The ledger shows its receipts.</h2>
+    <div id="sources-list"></div>
+    <p class="drawer-note">This prototype uses a locally generated snapshot. The rebuild script fetches current official API records without committing an API token.</p>
+  </aside>
+  <div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
