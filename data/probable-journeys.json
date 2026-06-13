@@ -1,0 +1,207 @@
+{
+  "models": [
+    {
+      "id": "kossola-clotilda",
+      "title": "Kossola / Cudjo Lewis",
+      "subtitle": "A named person on the Clotilda, with a rare but still incomplete chain",
+      "year": 1860,
+      "kind": "person-specific",
+      "confidence": "mixed: documented, reported, inferred, and unknown",
+      "summary": "Kossola was captured in a Dahomey raid, moved through Dahomey's slaving system toward Ouidah, transported on the Clotilda to Mobile, assigned to James Meaher, and later helped found Africatown after emancipation. His exact birthplace, route details, and daily work sites are not all fixed by the same archival chain.",
+      "why_enslaved": {
+        "label": "Raid by the Kingdom of Dahomey",
+        "certainty": "reported/documented in biographical sources"
+      },
+      "nodes": [
+        {
+          "label": "Bante region, Benin",
+          "lat": 8.4167,
+          "lon": 1.8833,
+          "type": "ancestral home",
+          "certainty": "inferred",
+          "note": "Often identified as Kossola's home region, not a surveyed village coordinate."
+        },
+        {
+          "label": "Dahomey raid and inland movement",
+          "lat": 7.1853,
+          "lon": 1.9912,
+          "type": "capture system",
+          "certainty": "reported",
+          "note": "Captured with others in a raid associated with the Kingdom of Dahomey."
+        },
+        {
+          "label": "Ouidah barracoon / market",
+          "lat": 6.36667,
+          "lon": 2.08333,
+          "type": "coastal market",
+          "certainty": "documented",
+          "note": "Held before embarkation at the principal Slave Coast port used by the Clotilda."
+        },
+        {
+          "label": "Clotilda: Ouidah to Mobile",
+          "lat": 30.69444,
+          "lon": -88.04306,
+          "type": "middle passage",
+          "certainty": "documented",
+          "note": "SlaveVoyages records 110 embarked and 108 disembarked on voyage 36990."
+        },
+        {
+          "label": "James Meaher / Mobile area",
+          "lat": 30.728,
+          "lon": -88.08,
+          "type": "enslavement after landing",
+          "certainty": "documented",
+          "note": "Enslaved.org records Kossola as given by Timothy Meaher to James Meaher."
+        },
+        {
+          "label": "Africatown",
+          "lat": 30.734,
+          "lon": -88.058,
+          "type": "post-emancipation community",
+          "certainty": "documented",
+          "note": "After emancipation, Clotilda survivors founded Africatown near Mobile."
+        }
+      ],
+      "sources": [
+        {
+          "name": "Enslaved.org full story: Cudjo Lewis",
+          "url": "https://enslaved.org/fullStory/16-23-106156/"
+        },
+        {
+          "name": "SlaveVoyages: Clotilda voyage 36990",
+          "url": "https://www.slavevoyages.org/"
+        },
+        {
+          "name": "Africatown Heritage House historical timeline",
+          "url": "https://clotilda.com/wp-content/uploads/2023/07/6.-Historical-Timeline.pdf"
+        }
+      ]
+    },
+    {
+      "id": "slave-coast-corridor",
+      "title": "Slave Coast Probability Corridor",
+      "subtitle": "A group-level model for unnamed captives from the Bight of Benin",
+      "year": 1859,
+      "kind": "regional-probability",
+      "confidence": "probable corridor, not an individual biography",
+      "summary": "For an unnamed captive from the Slave Coast, the defensible visualization is a probability corridor: hinterland capture through war, raiding, debt, judicial sale, or kidnapping; movement through inland brokers and coastal markets; confinement near Ouidah; Atlantic shipment; sale or forced distribution at a landing port; then labor in plantation, household, port, or industrial settings depending on destination.",
+      "why_enslaved": {
+        "label": "Multiple possible drivers",
+        "certainty": "system-level, not individual-specific"
+      },
+      "nodes": [
+        {
+          "label": "Bight of Benin hinterland",
+          "lat": 7.5,
+          "lon": 2.1,
+          "type": "possible origin zone",
+          "certainty": "estimated",
+          "note": "Possible inland origin zone. Exact home is unknown for most unnamed captives."
+        },
+        {
+          "label": "Dahomey / regional broker network",
+          "lat": 7.1853,
+          "lon": 1.9912,
+          "type": "enslavement and transfer system",
+          "certainty": "probable",
+          "note": "Regional wars, raids, judicial slavery, pawning, kidnapping, and broker networks fed the coastal trade."
+        },
+        {
+          "label": "Ouidah / Whydah market",
+          "lat": 6.36667,
+          "lon": 2.08333,
+          "type": "coastal market",
+          "certainty": "documented regional hub",
+          "note": "Ouidah was one of the most active slave-trading ports on the Slave Coast."
+        },
+        {
+          "label": "Atlantic crossing",
+          "lat": 18.0,
+          "lon": -35.0,
+          "type": "shipboard confinement",
+          "certainty": "route-dependent",
+          "note": "Specific ship, mortality, duration, and conditions depend on the voyage record."
+        },
+        {
+          "label": "Cuba, Brazil, Caribbean, or Gulf ports",
+          "lat": 20.5,
+          "lon": -75.5,
+          "type": "probable landing markets",
+          "certainty": "destination distribution",
+          "note": "Late-era Bight of Benin voyages often landed in Cuba, Brazil, the Caribbean, or rarely the U.S. Gulf Coast."
+        },
+        {
+          "label": "Sugar, coffee, cotton, port, or household labor",
+          "lat": 22.5,
+          "lon": -80.0,
+          "type": "probable labor regimes",
+          "certainty": "destination-specific",
+          "note": "Plantation and life-condition claims require a joined sale, census, residence, or estate record."
+        }
+      ],
+      "sources": [
+        {
+          "name": "Slavery and Remembrance: Ouidah",
+          "url": "https://slaveryandremembrance.org/articles/article/?id=A0120"
+        },
+        {
+          "name": "SlaveVoyages database",
+          "url": "https://www.slavevoyages.org/"
+        },
+        {
+          "name": "Enslaved.org data projects",
+          "url": "https://enslaved.org/data/"
+        }
+      ]
+    },
+    {
+      "id": "bora-liberated-african",
+      "title": "Bora",
+      "subtitle": "A named liberated African record with a short, unusually legible route",
+      "year": 1819,
+      "kind": "person-specific",
+      "confidence": "documented ship and fate, inferred language group",
+      "summary": "Bora appears in the SlaveVoyages PAST data as a named man aboard the NS de Regla. The record preserves age, height, ship, captain, embarkation at Little Bassa, disembarkation at Freetown, court condemnation, and the fate 'claimed by father'. It does not preserve his exact ancestral home or why he was enslaved.",
+      "why_enslaved": {
+        "label": "Unknown",
+        "certainty": "not recoverable from this record"
+      },
+      "nodes": [
+        {
+          "label": "Little Bassa",
+          "lat": 5.97111,
+          "lon": -10.15,
+          "type": "embarkation",
+          "certainty": "documented"
+        },
+        {
+          "label": "NS de Regla",
+          "lat": 7.2,
+          "lon": -11.9,
+          "type": "ship",
+          "certainty": "documented"
+        },
+        {
+          "label": "Freetown",
+          "lat": 8.49,
+          "lon": -13.23,
+          "type": "disembarkation and court",
+          "certainty": "documented"
+        },
+        {
+          "label": "Claimed by father",
+          "lat": 8.3,
+          "lon": -13.23,
+          "type": "post-disembark fate",
+          "certainty": "documented"
+        }
+      ],
+      "sources": [
+        {
+          "name": "SlaveVoyages PAST record: Bora",
+          "url": "https://www.slavevoyages.org/"
+        }
+      ]
+    }
+  ]
+}
