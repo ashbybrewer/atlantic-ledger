@@ -4,6 +4,10 @@ An evidence-aware, scroll-driven visualization of the trans-Atlantic slave
 trade. The project is built as a portfolio piece about movement at scale,
 source provenance, and the limits of historical reconstruction.
 
+## Open the live visualization
+
+**[Launch The Atlantic Ledger](https://ashbybrewer.github.io/atlantic-ledger/)**
+
 ## Run
 
 ```bash
